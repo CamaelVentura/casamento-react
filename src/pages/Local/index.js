@@ -32,7 +32,7 @@ export default class Convidados extends Component {
     const { name, address, description, phone } = data;
     const { file, type } = this.state;
     try {
-      const teste = await api.post('http://localhost:3030/dicas', {
+      const teste = await api.post('/dicas', {
         name,
         address,
         description,
@@ -40,7 +40,7 @@ export default class Convidados extends Component {
         type,
         img: 'path'
       });
-      await api.post(`http://localhost:3030/dicas/img/${teste.data._id}`, file);
+      await api.post(`/dicas/img/${teste.data._id}`, file);
 
       this.setState({ text: 'Dica adicionada com sucesso', error: false });
 

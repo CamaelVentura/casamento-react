@@ -22,7 +22,7 @@ export default class Convidados extends Component {
     const expected_kids = parseInt(data.expected_kids, 10);
     const { name } = data;
     try {
-      const teste = await api.post('http://localhost:3030/convidados', {
+      const teste = await api.post('/convidados', {
         name,
         expected_adults,
         expected_kids
