@@ -21,3 +21,13 @@ export const Div = styled.div`
     }
   }
 `;
+
+export const H1 = styled.h1`
+  padding: 20px 0 40px 0;
+  font-size:30px;
+  text-align: justify;
+  p {
+    text-indent: 25px;
+    margin-bottom: 20px;
+  }
+`;

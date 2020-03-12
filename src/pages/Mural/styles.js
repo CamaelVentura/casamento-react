@@ -20,37 +20,69 @@ export const Message = styled.div`
     margin-top: 30px;
   }
   @media (min-width: 320px) and (max-width:480px) {
-
+    font-size: 18px;
+    height:300px;
+    padding: 0;
   }
 `;
 
 export const MessageInfos = styled.div`
-  float: left;
-  position: absolute;
-  transform: translate(0, -50%);
-  top: 50%;
-  h1 {
-    padding-top:10px;
-    font-size: 40px;
+  @media (min-width: 320px) and (max-width: 480px){
+    align-content: center;
+    margin: 0 auto;
+    h1 {
+      padding-top:10px;
+      font-size: 28px;
+      padding-left: 10px;
+    }
+    p {
+      font-size: 14px;
+      padding-left: 10px;
+      padding-bottom:10px;
+    }
   }
-  p {
-    font-size: 20px;
+  @media (min-width: 481px){
+    float: left;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    h1 {
+      padding-top:10px;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
 `;
 
 export const MessageBody = styled.div`
-  position: absolute;
-  transform: translate(0, -50%);
-  top: 50%;
-  max-height: 80%;
-  float: left;
-  max-width: 100%;
-  overflow-y: auto;
-  word-wrap: break-word;
-  p {
-    padding-right:50px;
-    margin-left: 17vw;
-    margin-top: 10px;
+  @media (min-width: 320px) and (max-width:480px) {
+    position: absolute;
+    border-top: 1px solid;
+    max-height: 76%;
+    width: 100%;
+    overflow-y: auto;
+    word-wrap: break-word;
+    p {
+      padding: 0px 10px 10px 10px;
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: 481px){
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    max-height: 80%;
+    float: left;
+    max-width: 100%;
+    overflow-y: auto;
+    word-wrap: break-word;
+    p {
+      padding-right:50px;
+      margin-left: 17vw;
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -77,8 +109,9 @@ export const H1 = styled.h1`
   text-align: center;
   margin-top:50px;
   @media (min-width: 320px) and (max-width:480px) {
-    font-size:28px;
+    font-size:32px;
     margin-top:20px;
+
   }
 `;
 

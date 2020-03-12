@@ -67,6 +67,7 @@ export default class Recado extends Component {
                 id="body"
                 value={body}
                 onChange={this.handleInputBodyChange}
+                rows="5"
               />
             </Row>
             <Row>

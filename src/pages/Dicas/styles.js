@@ -61,6 +61,7 @@ export const Place = styled.div`
       left:50%;
       top:50%;
       transform: translate(-50%, 30%);
+      border: 1px solid;
     }
     & + & {
       margin-top: 30px;
@@ -78,6 +79,7 @@ export const Place = styled.div`
       height:200px;
       margin-right: 20px;
       margin-top: 0px;
+      border: 1px solid;
     }
     & + & {
       margin-top: 70px;

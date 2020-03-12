@@ -12,6 +12,7 @@ export default function Noivos() {
 
       <li><Link to="/n/convidado">Adicionar novo convidado</Link></li>
       <li><Link to="/n/confirmados">Ver convidados confirmados</Link></li>
+      <li><Link to="/n/local">Adicionar local nas dicas</Link></li>
     </Options>
   );
 }

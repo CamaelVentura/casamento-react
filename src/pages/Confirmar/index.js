@@ -58,7 +58,7 @@ export default class Confirmar extends Component {
     return (
       <>
         <div>
-          <H1>Para confirmar presença, basta digitar<br /> o nome que está no convite</H1>
+          <H1>Para se encontrar a felicidade é necessário que se tenha<br /> um amor, uma estrutura familiar e bons amigos.<br />Nós já encontramos o amor, temos a melhor família e<br /> aqui esperamos nossos grandes amigos, vocês!</H1>
           <DivForm error={error}>
             <Form
               onSubmit={this.handleSubmit}
