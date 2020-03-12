@@ -30,4 +30,7 @@ export const H1 = styled.h1`
     text-indent: 25px;
     margin-bottom: 20px;
   }
+  @media (min-width: 320px) and (max-width:480px) {
+    font-size:20px;
+  }
 `;
