@@ -9,6 +9,7 @@ import Convidado from './pages/Convidado';
 import Dicas from './pages/Dicas';
 import Home from './pages/Home';
 import Local from './pages/Local';
+import Lista from './pages/Lista';
 import Mural from './pages/Mural';
 import Noivos from './pages/Noivos'
 import Recado from './pages/Recado';
@@ -21,6 +22,7 @@ export default function Routes() {
         <Route path="/n" exact component={Noivos} />
         <Route path="/n/confirmados" component={Confirmados} />
         <Route path="/n/convidado" component={Convidado} />
+        <Route path="/n/lista" component={Lista} />
         <Route path="/n/local" component={Local} />
         <Route path="/confirmar" exact component={Confirmar} />
         <Route path="/confirmar/:name" component={Confirmando} />
