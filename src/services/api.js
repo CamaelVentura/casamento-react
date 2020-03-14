@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   headers: { 'X-Requested-With': 'XMLHttpRequest' },
-  baseURL: 'https://68.183.145.105',
+  baseURL: 'https://camael.club',
 });
 
 export default api;

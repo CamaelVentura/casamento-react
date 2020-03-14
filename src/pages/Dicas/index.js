@@ -87,7 +87,7 @@ export default class Home extends Component {
         <Conteudo>
           {show.map(place => (
             <Place key={place.name}>
-              <img src={`https://68.183.145.105/files/${place.img}`} alt={place.name} />
+              <img src={`http://68.183.145.105/files/${place.img}`} alt={place.name} />
               <PlaceInfos>
                 <H1>{place.name}</H1>
                 <p>{place.description}</p>
