@@ -22,12 +22,11 @@ export default class Convidados extends Component {
     const expected_kids = parseInt(data.expected_kids, 10);
     const { name } = data;
     try {
-      const teste = await api.post('/convidados', {
+      await api.post('/convidados', {
         name,
         expected_adults,
         expected_kids
       });
-      console.log(teste);
 
       this.setState({ text: 'Convidado adicionado com sucesso', error: false });
       resetForm({ expected_adults: '1', expected_kids: '0' });

@@ -46,10 +46,21 @@ export default class Confirmar extends Component {
       this.props.history.push(`/confirmar/${encodeURIComponent(newConfirmation)}`);
 
     } catch (error) {
-      this.setState({
-        error: true,
-        text: 'Não foi possível confirmar convidado!',
-      });
+      try {
+        const response = await api.post(`/convidados`, {
+          name: newConfirmation,
+        });
+        this.setState({ guest: response.data });
+
+        this.props.history.push(`/confirmar/${encodeURIComponent(newConfirmation)}`);
+
+      } catch (err) {
+        this.setState({
+          error: true,
+          text: 'Não foi possível confirmar convidado!',
+        });
+      }
+
     }
   };
 
@@ -58,7 +69,12 @@ export default class Confirmar extends Component {
     return (
       <>
         <div>
-          <H1>Para se encontrar a felicidade é necessário que se tenha<br /> um amor, uma estrutura familiar e bons amigos.<br />Nós já encontramos o amor, temos a melhor família e<br /> aqui esperamos nossos grandes amigos, vocês!</H1>
+          <H1>
+            Para se encontrar a felicidade é necessário que se tenha<br />
+            um amor, uma estrutura familiar e bons amigos.<br />
+            Nós já encontramos o amor, temos a melhor família e<br />
+            aqui esperamos nossos grandes amigos, vocês!
+          </H1>
           <DivForm error={error}>
             <Form
               onSubmit={this.handleSubmit}
@@ -66,7 +82,7 @@ export default class Confirmar extends Component {
             >
               <input
                 type="text"
-                placeholder="Digite seu nome aqui"
+                placeholder="Digite seu nome ou convite aqui"
                 onChange={this.handleInputChange}
                 value={newConfirmation}
               />

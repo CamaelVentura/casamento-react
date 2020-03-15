@@ -20,8 +20,8 @@ export default class Lista extends Component {
       const { convidados, adults, kids } = this.state;
       this.setState({
         convidados: [...convidados, data],
-        adults: adults + data.confirmed_adults,
-        kids: kids + data.confirmed_kids
+        adults: adults + data.expexted_adults,
+        kids: kids + data.expected_kids
       });
     });
   }
@@ -38,9 +38,9 @@ export default class Lista extends Component {
         </Total>
         <div>
           {convidados.map(convidado => (
-            <Confirmed key={convidado.id}>
-              <h1>{convidado.name}</h1>
-              <span>Adulconvidadotos: {convidado.confirmed_adults}</span>
+            <Confirmed key={convidado.name}>
+              <h1>{convidado.name.toUpperCase()}</h1>
+              <span>Adultos: {convidado.confirmed_adults}</span>
               <span>Criancas: {convidado.confirmed_kids}</span>
             </Confirmed>
           ))}

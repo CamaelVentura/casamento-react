@@ -38,8 +38,8 @@ export default class Confirmados extends Component {
         </Total>
         <div>
           {confirmados.map(confirmado => (
-            <Confirmed key={confirmado.id}>
-              <h1>{confirmado.name}</h1>
+            <Confirmed key={confirmado.name}>
+              <h1>{confirmado.name.toUpperCase()}</h1>
               <span>Adultos: {confirmado.confirmed_adults}</span>
               <span>Criancas: {confirmado.confirmed_kids}</span>
             </Confirmed>

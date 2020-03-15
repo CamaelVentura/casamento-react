@@ -5,6 +5,7 @@ export const Conteudo = styled.div`
   min-width:90%;
   padding: 0 10vw;
   max-width: 100%;
+  padding-bottom: 30px;
 `;
 
 export const Message = styled.div`

@@ -25,9 +25,10 @@ export const Confirmed = styled.div`
   h1 {
     margin: 0 10px;
     width:260px;
-    font-size:38px;
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
     @media (min-width: 320px) and (max-width: 480px){
-      font-size:28px;
+      font-size:18px;
       width:70px;
     }
   }

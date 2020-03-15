@@ -6,6 +6,7 @@ export const Conteudo = styled.div`
     min-width:90%;
     padding-left: 5vw;
     margin: 0;
+    padding-bottom:70px;
   }
   @media (min-width: 320px) and (max-width:480px) {
     padding-bottom: 30px;
@@ -52,6 +53,7 @@ export const Place = styled.div`
   @media (min-width: 320px) and (max-width: 480px){
     align-items: center;
     font-size: 18px;
+
     img {
       border-radius: 50%;
       width:100px;
@@ -85,7 +87,6 @@ export const Place = styled.div`
       margin-top: 70px;
     }
   }
-
 
 `;
 
