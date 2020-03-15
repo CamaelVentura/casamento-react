@@ -84,19 +84,28 @@ export default class Confirmar extends Component {
     const { confirmed_adults, confirmed_kids } = this.state;
 
     guest.confirmed_adults = confirmed_adults;
-    guest.confirmed_kids = confirmed_kids
+    guest.confirmed_kids = confirmed_kids;
 
-    await api.put(`/confirmar/${guest.name}`, {
-      confirmed_adults,
-      confirmed_kids,
-    })
+    try {
+      await api.put(`/confirmar/${guest.name}`, {
+        confirmed_adults,
+        confirmed_kids,
+      })
 
-    this.setState({
-      guest,
-      text: 'Confirmado com sucesso!',
-      error: false,
-      loading: false
-    });
+      this.setState({
+        guest,
+        text: 'Confirmado com sucesso!',
+        error: false,
+        loading: false
+      });
+
+    } catch (error) {
+      this.setState({
+        text: 'Erro ao confirmar!',
+        error: true,
+        loading: false
+      });
+    }
 
   }
 
